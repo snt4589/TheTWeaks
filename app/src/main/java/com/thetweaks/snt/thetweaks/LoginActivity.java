@@ -70,7 +70,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
 
             case R.id.login_button:
-                b1.setBackgroundResource(R.drawable.btn_afterpressed);
+                b1.setBackgroundResource(R.drawable.button_pressed);
 
                 break;
 
