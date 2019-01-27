@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:id="@+id/constraintLayout"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:fillViewport="true" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.0"
+            android:id="@+id/nestedScrollView">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <HorizontalScrollView
+                    android:layout_width="400dp"
+                    android:layout_height="232dp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/horizontalScrollView">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                    <TextView
+                            android:text="                                                                                                       Acadmics"
+                            android:background="@drawable/academic"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/acadmics" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                            Technology"
+                            android:background="@drawable/tech2"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/technology" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                      Education"
+                            android:background="@drawable/edu2"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/education" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                      Internship"
+                            android:background="@drawable/edu2"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/internship" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                       Business"
+                            android:background="@drawable/bussiness"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/business" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                         Socitey"
+                            android:background="@drawable/society"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/socitey" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                        Lifestyle"
+                            android:background="@drawable/lifestyle"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/lifestyle" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                         Sports"
+                            android:background="@drawable/bussiness"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/sports" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                     Movies and TV"
+                            android:background="@drawable/bussiness"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/movie" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                         Culture"
+                            android:background="@drawable/culture"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/culture" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                      Development"
+                            android:background="@drawable/bussiness"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/development" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                      Innovation"
+                            android:background="@drawable/bussiness"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/innovation" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                      News Media"
+                            android:background="@drawable/media"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/media" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                         Science"
+                            android:background="@drawable/bussiness"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/science" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                         Travel"
+                            android:background="@drawable/bussiness"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/travel" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                      Law and Gov"
+                            android:background="@drawable/bussiness"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/law" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+                    <TextView
+                            android:text="                                                                                                         Health"
+                            android:background="@drawable/health"
+                            android:layout_margin="10dp"
+                            android:padding="45dp"
+                            android:layout_width="154dp"
+                            android:layout_height="205dp" android:id="@+id/health" android:layout_weight="1"
+                            android:textColor="#ffff"/>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/post_recycler"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="416dp"
+            android:layout_height="38dp"
+            android:background="#ffff"
+            app:layout_constraintBottom_toBottomOf="@+id/nestedScrollView" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="match_parent" app:srcCompat="@drawable/newsfeed" android:id="@+id/imageView4"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/community" android:id="@+id/imageView5"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/publish" android:id="@+id/imageView6"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/explore" android:id="@+id/imageView7"
+                android:layout_weight="1"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
