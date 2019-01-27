@@ -1,12 +1,8 @@
 package com.thetweaks.snt.thetweaks;
 
 import android.animation.AnimatorSet;
-import android.annotation.SuppressLint;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -70,7 +66,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
 
             case R.id.login_button:
-                b1.setBackgroundResource(R.drawable.btn_afterpressed);
+                b1.setBackgroundResource(R.drawable.button_edit);
 
                 break;
 
