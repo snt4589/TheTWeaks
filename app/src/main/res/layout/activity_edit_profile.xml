@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".editProfile">
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:fillViewport="true" app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="63dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            android:background="#FFFFFF">
+
+                <TextView
+                        android:text="Update Profile Picture: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="24dp" android:textColor="#000000" android:id="@+id/textView11"
+                        android:textSize="18sp"/>
+                <ImageButton
+                        android:layout_width="204dp"
+                        android:layout_height="218dp" app:srcCompat="@drawable/profile"
+                        android:id="@+id/uploadProfile"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"/>
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editText" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/uploadProfile"
+                        android:textSize="14sp" android:hint="First  Name"/>
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editText2" android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/editText" android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp" app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+                        android:hint="Last Name"/>
+                <TextView
+                        android:text="Add short bio: Student | NIT | Writer ...."
+                        android:layout_width="0dp"
+                        android:layout_height="18dp"
+                        android:id="@+id/textView19" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp" android:textSize="14sp" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/editText2"/>
+                <Button
+                        android:text="Edit Autobiography"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button2" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginLeft="49dp" android:layout_marginStart="49dp"
+                        android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView19"/>
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="#FFFFFF"
+            >
+
+                <TextView
+                        android:text="Edit About"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView23" android:textSize="24sp"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp" android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toTopOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="675dp"
+                    android:background="#FFFFFF">
+
+                <TextView
+                        android:text="Basic Info :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView24"
+                        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:textSize="24sp"
+                        android:textColor="#000000" android:layout_marginTop="24dp"/>
+                <TextView
+                        android:text="Gender:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp" android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView24" android:id="@+id/textView26"
+                        android:textColor="#000000"/>
+                <RadioButton
+                        android:text="Male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioButton" app:layout_constraintStart_toEndOf="@+id/textView26"
+                        android:layout_marginLeft="12dp" android:layout_marginStart="12dp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView26"/>
+                <RadioButton
+                        android:text="Female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radioButton2" app:layout_constraintStart_toEndOf="@+id/radioButton"
+                        android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/radioButton"/>
+                <TextView
+                        android:text="Birthdate:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView26"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp" android:textColor="#000000" android:id="@+id/textView28"/>
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:ems="10"
+                        android:id="@+id/editText3"
+                        app:layout_constraintStart_toEndOf="@+id/textView28" android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp" android:hint="Date of Birth" android:textSize="14sp"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/textView28"/>
+                <TextView
+                        android:text="City:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp" android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView28" android:textColor="#000000"
+                        android:id="@+id/textView31"/>
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editText4" app:layout_constraintBaseline_toBaselineOf="@+id/textView31"
+                        app:layout_constraintStart_toEndOf="@+id/textView31" android:layout_marginStart="40dp"
+                        android:layout_marginLeft="40dp" android:textSize="14sp" android:hint="City"/>
+                <TextView
+                        android:text="State:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000" app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView31" android:layout_marginTop="20dp"
+                        android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+                        android:id="@+id/textView34"/>
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editText5" android:textSize="14sp"
+                        app:layout_constraintStart_toEndOf="@+id/textView34" android:layout_marginStart="32dp"
+                        android:layout_marginLeft="32dp" app:layout_constraintBaseline_toBaselineOf="@+id/textView34"
+                        android:hint="State"/>
+                <TextView
+                        android:text="Country:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView35"
+                        app:layout_constraintTop_toBottomOf="@+id/textView34"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp" android:layout_marginTop="20dp" android:textColor="#000000"/>
+                <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editText6" android:hint="Country"
+                        app:layout_constraintStart_toEndOf="@+id/textView35" android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:textSize="14sp" app:layout_constraintBaseline_toBaselineOf="@+id/textView35"/>
+                <TextView
+                        android:text="Extended Info :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView36"
+                        android:layout_marginTop="24dp" app:layout_constraintTop_toBottomOf="@+id/textView35"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp" android:textSize="24sp" android:textColor="#000000"/>
+                <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/ques1" android:layout_marginTop="16dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView36"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+                        android:hint="What you looking for next 5 years ?"/>
+                <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/ques2" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp" app:layout_constraintTop_toBottomOf="@+id/ques1"
+                        android:layout_marginTop="4dp" android:hint="Political Views" android:textSize="14sp"/>
+                <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/ques3" android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@+id/ques2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+                        android:hint="Favroite film list (at least 3)" android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+                        android:textSize="14sp"/>
+                <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/ques4"
+                        android:hint="Intrests"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@+id/ques3" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+                        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp" android:textSize="14sp"/>
+                <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+                        android:id="@+id/ques5" android:layout_marginTop="4dp"
+                        app:layout_constraintTop_toBottomOf="@+id/ques4" android:hint="Relationship Status"
+                        android:textSize="14sp" app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginEnd="16dp" android:layout_marginRight="16dp"/>
+                <Button
+                        android:text="Save Profile"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/saveProfile" app:layout_constraintTop_toBottomOf="@+id/ques5"
+                        android:layout_marginTop="16dp" android:layout_marginLeft="32dp"
+                        android:layout_marginStart="32dp" android:layout_marginEnd="32dp"
+                        android:layout_marginRight="32dp"/>
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>
