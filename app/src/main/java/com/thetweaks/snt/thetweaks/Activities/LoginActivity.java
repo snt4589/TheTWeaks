@@ -1,15 +1,12 @@
-package com.thetweaks.snt.thetweaks;
+package com.thetweaks.snt.thetweaks.Activities;
 
 import android.animation.AnimatorSet;
-import android.annotation.SuppressLint;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import com.thetweaks.snt.thetweaks.R;
 
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {

@@ -1,4 +1,4 @@
-package com.thetweaks.snt.thetweaks;
+package com.thetweaks.snt.thetweaks.explorerData;
 
 public class User {
     private String userName;
@@ -8,6 +8,7 @@ public class User {
     private String date;
     private String studentDetail;
     private String views;
+    private String topic;
 
     public User(String name, String post, String up, String down, String date, String stndetail, String views) {
         userName = name;

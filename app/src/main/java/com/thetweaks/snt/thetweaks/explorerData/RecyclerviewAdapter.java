@@ -1,4 +1,4 @@
-package com.thetweaks.snt.thetweaks;
+package com.thetweaks.snt.thetweaks.explorerData;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.thetweaks.snt.thetweaks.R;
 
 import java.util.List;
 
@@ -57,23 +58,31 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
 
         private TextView post;
         private TextView userdetail;
-        private TextView views;
         private TextView upvote;
         private TextView downvote;
-        private ImageView postView;
         private TextView studentinfo;
-
+        private TextView views;
+        private TextView topic;
+        private ImageView propic;
+        private ImageView postPic;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
             date = (TextView) itemView.findViewById(R.id.dateOfPost);
             post = (TextView) itemView.findViewById(R.id.post_detail);
-            views = (TextView) itemView.findViewById(R.id.views);
+            topic = (TextView) itemView.findViewById(R.id.Topic);
             upvote = (TextView) itemView.findViewById(R.id.upvote);
             downvote = (TextView) itemView.findViewById(R.id.downvote);
             studentinfo = (TextView) itemView.findViewById(R.id.student_info);
-            userdetail = (TextView) itemView.findViewById(R.id.Name);
+            userdetail = (TextView) itemView.findViewById(R.id.Profile_name);
+            postPic= (ImageView) itemView.findViewById(R.id.post_img);
+            views = (TextView) itemView.findViewById(R.id.views);
+            topic = (TextView) itemView.findViewById(R.id.Topic);
+            propic = (ImageView) itemView.findViewById(R.id.profile_photo);
+            postPic = (ImageView) itemView.findViewById(R.id.profile_img);
+
+
         }
     }
 

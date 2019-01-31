@@ -1,7 +1,8 @@
-package com.thetweaks.snt.thetweaks
+package com.thetweaks.snt.thetweaks.Activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.thetweaks.snt.thetweaks.R
 
 class MainActivity : AppCompatActivity() {
 
