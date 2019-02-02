@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+android:background="#ffff">
+
+    <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp" app:srcCompat="@drawable/community"
+            android:id="@+id/pro1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="48dp" android:layout_marginStart="48dp" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp" app:srcCompat="@drawable/community"
+            android:id="@+id/pro2"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="48dp"
+            android:layout_marginRight="48dp"/>
+    <TextView
+            android:text="Sushil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/commname1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="80dp" android:layout_marginStart="80dp" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/pro1"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/location_id1"
+            app:layout_constraintBaseline_toBaselineOf="@+id/desig1" app:layout_constraintStart_toEndOf="@+id/desig1"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/desig1" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/commname1" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"/>
+    <TextView
+            android:text="Rohit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/commname2" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="80dp"
+            android:layout_marginRight="80dp" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/pro2"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/desg2" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/commname2" app:layout_constraintEnd_toStartOf="@+id/location_id2"
+            android:layout_marginEnd="20dp" android:layout_marginRight="20dp"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/location_id2" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/desg2"/>
+    <Space
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/location_id2"/>
+</android.support.constraint.ConstraintLayout>

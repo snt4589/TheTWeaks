@@ -1,4 +1,4 @@
-package com.thetweaks.snt.thetweaks;
+package com.thetweaks.snt.thetweaks.ProfileClasses;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.thetweaks.snt.thetweaks.R;
 import com.thetweaks.snt.thetweaks.explorerData.RecyclerviewAdapter;
 import com.thetweaks.snt.thetweaks.explorerData.User;
 
