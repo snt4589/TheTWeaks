@@ -16,4 +16,7 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_signup">activity_signup</string>
+    <string name="db_messages">https://thetweaks-57733.firebaseio.com/messages/</string>
+    <string name="db_users">https://thetweaks-57733.firebaseio.com/users</string>
+    <string name="db_users_json">https://thetweaks-57733.firebaseio.com/users.json</string>
 </resources>
