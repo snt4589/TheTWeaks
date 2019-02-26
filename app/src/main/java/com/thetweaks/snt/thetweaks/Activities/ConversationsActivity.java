@@ -69,7 +69,7 @@ public class ConversationsActivity extends AppCompatActivity {
     }
 
     public void doOnSuccess(String s){
-        try {g
+        try {
             JSONObject obj = new JSONObject(s);
 
             Iterator i = obj.keys();
