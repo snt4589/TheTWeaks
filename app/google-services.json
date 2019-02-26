@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "521691296222",
+    "firebase_url": "https://thetweaks-57733.firebaseio.com",
+    "project_id": "thetweaks-57733",
+    "storage_bucket": "thetweaks-57733.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521691296222:android:e8bcd8014bf3d6b9",
+        "android_client_info": {
+          "package_name": "com.thetweaks.snt.thetweaks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521691296222-e10q6ablb5mgos1dn7pie4p5vhaj0tp0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thetweaks.snt.thetweaks",
+            "certificate_hash": "3f5973c393b51ebee8e751030853260586777722"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0FjEIEunIldHekLB5q8eFh57rXN3MGvs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521691296222-uespfv79o9v2t3se0lnfebs25vadstoi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

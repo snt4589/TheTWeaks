@@ -75,5 +75,8 @@ public class User {
     public void setViews(String views) {
         this.views = views;
     }
+
+    public static class feed {
+    }
 }
 
