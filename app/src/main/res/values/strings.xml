@@ -19,4 +19,6 @@
     <string name="db_messages">https://thetweaks-57733.firebaseio.com/messages/</string>
     <string name="db_users">https://thetweaks-57733.firebaseio.com/users</string>
     <string name="db_users_json">https://thetweaks-57733.firebaseio.com/users.json</string>
+    <string name="feed_welcome_text">Let your community know the things you care about with a Tweaks of your own
+    </string>
 </resources>

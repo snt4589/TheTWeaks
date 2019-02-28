@@ -5,4 +5,34 @@
                                              android:id="@+id/constraintLayout"
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent"
-/>
+>
+    <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/post_recycler"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="416dp"
+            android:layout_height="38dp"
+            android:background="#ffff"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="match_parent" app:srcCompat="@drawable/newsfeed" android:id="@+id/imageView4"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/community" android:id="@+id/imageView5"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/publish" android:id="@+id/imageView6"
+                android:layout_weight="1"/>
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/explore" android:id="@+id/imageView7"
+                android:layout_weight="1"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
