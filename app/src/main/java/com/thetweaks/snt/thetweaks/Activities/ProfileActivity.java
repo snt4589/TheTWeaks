@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -20,7 +21,7 @@ public class ProfileActivity extends AppCompatActivity {
     private ProfilePageAdapter adapter;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
-    Button messageBtn;
+    ImageButton messageBtn;
     TextView userName;
 
 
@@ -29,7 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_profile);
         // setContentView(R.layout.activity_profile);
-        messageBtn = (Button) findViewById(R.id.messageBtn);
+        messageBtn = (ImageButton) findViewById(R.id.messageBtn);
         userName = (TextView) findViewById(R.id.userName);
 
         mAuth = FirebaseAuth.getInstance();
