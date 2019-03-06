@@ -91,68 +91,7 @@ public class feedActivity extends AppCompatActivity {
 
             }
         });
-        mDatabase.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-//                Log.e("hey its running","hey now brown102");
-//                Map<String, String> postMap = (Map<String, String>) dataSnapshot.getValue();
-//                String category = postMap.get("categories");
-//                String location = "None";
-//                try {
-//                    location = postMap.get("location");
-//                } catch (Exception e) {
-//                    System.out.println("ERROR" + e.toString());
-//                }
-//
-//                String imageLink ="code for image";
-//                //TODO:this is for when anynode is added you have to make a snapshot for all existing nodes first
-//               // imageLink = postMap.get("");
-//                String post = postMap.get("post_image_url");
-//                String profilePicLink = "asdasd";
-////                String profilePicLink = mDatabase.child("users").child(postMap.get("user_id")).toString();
-//                String viewsCount = "1";
-//                try {
-//                    viewsCount = postMap.get("views");
-//                } catch (Exception e) {
-//                    System.out.println("ERROR" + e.toString());
-//                }
-//                String date = postMap.get("post_date");
-//
-//                Feed feed = new Feed(category, location, imageLink, post,profilePicLink,  viewsCount, date);
-//
-//                feedsList.add(feed);
 
-                mAdapter.notifyDataSetChanged();
-                // recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-
-                recyclerView.setAdapter(mAdapter);
-            }
-
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-        mAdapter.notifyDataSetChanged();
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-
-        recyclerView.setAdapter(mAdapter);
 
     }
 }
