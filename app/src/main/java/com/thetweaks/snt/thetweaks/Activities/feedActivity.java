@@ -1,5 +1,6 @@
 package com.thetweaks.snt.thetweaks.Activities;
 
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import com.google.firebase.database.*;
 import com.thetweaks.snt.thetweaks.R;
 import com.thetweaks.snt.thetweaks.explorerData.Feed;
@@ -28,6 +30,8 @@ public class feedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
+//        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
 
         recyclerView = (RecyclerView) findViewById(R.id.feed_recycler);
 
@@ -38,43 +42,90 @@ public class feedActivity extends AppCompatActivity {
         recyclerView.setAdapter(mAdapter);
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+//        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
 
         prepareFeedData();
     }
-
+    //TODO: Still need to customize data to the profile
     private void prepareFeedData() {
-        Feed feed = new Feed("News", "Raipur", "image", "This is the sample text for the news content","profile name"
-                                ,20, "11-02-2019");
-        feedsList.add(feed);
+
         DatabaseReference postsRef = mDatabase.child("posts");
-        postsRef.addChildEventListener(new ChildEventListener() {
+        postsRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot snap : dataSnapshot.getChildren()) {
+                    Log.e("hey its running", "hey now brown");
+                    Map<String, String> postMap = (Map<String, String>) snap.getValue();
+                    String category = postMap.get("categories");
+                    String location = "None";
+                    try {
+                        location = postMap.get("location");
+                    } catch (Exception e) {
+                        System.out.println("ERROR" + e.toString());
+                    }
+
+                    String imageLink = "code for image";
+                    //TODO:this is for when anynode is added you have to make a snapshot for all existing nodes first
+                    // imageLink = postMap.get("");
+                    String post = postMap.get("post_content");
+                    //  String profilePicLink = mDatabase.child("users").child(postMap.get("user_id"));
+                    String profilePicLink = postMap.get("post_author");
+                    String viewsCount = "1";
+                    try {
+                        viewsCount = postMap.get("views");
+                    } catch (Exception e) {
+                        System.out.println("ERROR" + e.toString());
+                    }
+                    String date = postMap.get("post_date");
+                    String topic = postMap.get("post_title");
+
+                    Feed feed = new Feed(category, location, imageLink, post, profilePicLink, viewsCount, date, topic);
+                    feedsList.add(feed);
+
+                    Log.e("hey its running", "hey now brown2");
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+        mDatabase.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                Map postMap = dataSnapshot.getValue(Map.class);
-                String category = postMap.get("categories").toString();
-                String location = "None";
-                try {
-                    location = postMap.get("location").toString();
-                } catch (Exception e) {
-                    System.out.println("ERROR" + e.toString());
-                }
+//                Log.e("hey its running","hey now brown102");
+//                Map<String, String> postMap = (Map<String, String>) dataSnapshot.getValue();
+//                String category = postMap.get("categories");
+//                String location = "None";
+//                try {
+//                    location = postMap.get("location");
+//                } catch (Exception e) {
+//                    System.out.println("ERROR" + e.toString());
+//                }
+//
+//                String imageLink ="code for image";
+//                //TODO:this is for when anynode is added you have to make a snapshot for all existing nodes first
+//               // imageLink = postMap.get("");
+//                String post = postMap.get("post_image_url");
+//                String profilePicLink = "asdasd";
+////                String profilePicLink = mDatabase.child("users").child(postMap.get("user_id")).toString();
+//                String viewsCount = "1";
+//                try {
+//                    viewsCount = postMap.get("views");
+//                } catch (Exception e) {
+//                    System.out.println("ERROR" + e.toString());
+//                }
+//                String date = postMap.get("post_date");
+//
+//                Feed feed = new Feed(category, location, imageLink, post,profilePicLink,  viewsCount, date);
+//
+//                feedsList.add(feed);
 
-                String imageLink = postMap.get("imageUrl").toString();
-                String post = postMap.get("post_image_url").toString();
-                String profilePicLink = mDatabase.child("users").child(postMap.get("user_id").toString()).toString();
-                int viewsCount = 1;
-                try {
-                    viewsCount = ((int) postMap.get("views"));
-                } catch (Exception e) {
-                    System.out.println("ERROR" + e.toString());
-                }
-                String date = postMap.get("post_date").toString();
+                mAdapter.notifyDataSetChanged();
+                // recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
 
-                Feed feed = new Feed(category, location, imageLink, post,profilePicLink,  viewsCount, date);
-
-                feedsList.add(feed);
-
+                recyclerView.setAdapter(mAdapter);
             }
 
             @Override
@@ -102,5 +153,6 @@ public class feedActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
 
         recyclerView.setAdapter(mAdapter);
+
     }
 }

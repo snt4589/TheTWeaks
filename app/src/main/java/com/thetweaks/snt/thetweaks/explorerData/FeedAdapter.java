@@ -14,7 +14,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> 
     private List<Feed> feedsList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView category, location, postContent, profileName, date, tweakViews;
+        public TextView category, location, postContent, profileName, date, tweakViews,topic;
         public ImageView profileImg;
 
         public MyViewHolder(View view) {
@@ -22,9 +22,10 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> 
             category = (TextView) view.findViewById(R.id.category);
             location = (TextView) view.findViewById(R.id.location);
             postContent = (TextView) view.findViewById(R.id.post_content);
-            profileName = (TextView) view.findViewById(R.id.profileName);
-            date = (TextView) view.findViewById(R.id.date);
-            tweakViews = (TextView) view.findViewById(R.id.tweakViews);
+            profileName = (TextView) view.findViewById(R.id.Profile_name);
+            date = (TextView) view.findViewById(R.id.post_date);
+            tweakViews = (TextView) view.findViewById(R.id.post_view);
+            topic = (TextView) view.findViewById(R.id.feed_topic);
         }
     }
 
@@ -49,6 +50,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> 
         holder.profileName.setText(feed.getProfilePicLink());
         holder.date.setText(feed.getDate());
         holder.tweakViews.setText(feed.getViewsCount());
+        holder.topic.setText(feed.getTopic());
     }
 
     @Override

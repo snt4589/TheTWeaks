@@ -5,86 +5,99 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#ffffff"
         tools:context=".Activities.feedActivity">
-    <LinearLayout android:layout_width="match_parent"
-                  android:id="@+id/layout1"
-                  android:weightSum="1"
-                  android:orientation="horizontal"
-                  android:background="@android:color/background_light"
-                  android:layout_height="wrap_content">
-        <ImageView
-                android:id="@+id/profile_img"
-                android:layout_width="0dp"
-                android:layout_weight="0.1"
-                android:src="@android:drawable/ic_menu_gallery"
-                android:layout_gravity="top"
-                   android:layout_height="match_parent"/>
-        <LinearLayout android:layout_width="0dp"
-                      android:layout_weight="0.9"
-                      android:layout_height="wrap_content"
-        android:orientation="vertical">
-            <TextView
-                    android:id="@+id/Profile_name"
-                    android:layout_width="wrap_content"
-                    android:textColor="@android:color/black"
-                      android:layout_height="wrap_content"
-                    android:background="@android:color/background_light"
-                    android:text="Hii Tweaks user"
-                    android:textSize="12dp"/>
-            <TextView
-                    android:id="@+id/feed_welcome_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/background_light"
-                    android:text="@string/feed_welcome_text"
-                    android:textSize="10dp"/>
-            <Button android:layout_width="60dp"
-                    android:layout_height="16dp"
-            android:text="Write Tweak"
-                    android:background="#6200BE"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="8dp"
-            android:textAllCaps="false"
-            />
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:fillViewport="true"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent"
+                          android:id="@+id/layout1"
+                          android:weightSum="1"
+                          android:orientation="horizontal"
+                          android:background="@android:color/background_light"
+                          android:layout_height="wrap_content"
+                          app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                        android:id="@+id/profile_img"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.1"
+                        android:src="@android:drawable/ic_menu_gallery"
+                        android:layout_gravity="top"
+                        android:layout_height="match_parent"/>
+                <LinearLayout android:layout_width="0dp"
+                              android:layout_weight="0.9"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/post_date"
+                            android:layout_width="wrap_content"
+                            android:textColor="@android:color/black"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/background_light"
+                            android:text="Hii Tweaks user"
+                            android:textSize="14sp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/background_light"
+                            android:text="@string/feed_welcome_text"
+                            android:textSize="12sp"/>
+                    <Button android:layout_width="73dp"
+                            android:layout_height="19dp"
+                            android:text="Write Tweak"
+                            android:background="#6200BE"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="10sp"
+                            android:textAllCaps="false"
+                    />
 
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+
+                    android:id="@+id/feed_recycler"
+                    app:layout_constraintTop_toBottomOf="@id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+
+            </android.support.v7.widget.RecyclerView>
 
         </LinearLayout>
-
-    </LinearLayout>
-
-    <android.support.v7.widget.RecyclerView
-
-            android:id="@+id/feed_recycler"
-            app:layout_constraintTop_toBottomOf="@id/layout1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scrollbars="vertical">
-
-    </android.support.v7.widget.RecyclerView>
-
+    </android.support.v4.widget.NestedScrollView>
     <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="416dp"
-            android:layout_height="38dp"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
             android:background="#ffff"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            android:paddingTop="2dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
         <ImageView
                 android:layout_width="200dp"
-                android:layout_height="match_parent" app:srcCompat="@drawable/newsfeed" android:id="@+id/imageView4"
+                android:layout_height="30dp" app:srcCompat="@drawable/newsfeed"
                 android:layout_weight="1"/>
         <ImageView
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/community" android:id="@+id/imageView5"
+                android:layout_height="30dp" app:srcCompat="@drawable/community"
                 android:layout_weight="1"/>
         <ImageView
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/publish" android:id="@+id/imageView6"
+                android:layout_height="30dp" app:srcCompat="@drawable/publish"
                 android:layout_weight="1"/>
         <ImageView
                 android:layout_width="200dp"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/explore" android:id="@+id/imageView7"
+                android:layout_height="30dp" app:srcCompat="@drawable/explore"
                 android:layout_weight="1"/>
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>

@@ -1,14 +1,15 @@
 package com.thetweaks.snt.thetweaks.explorerData;
 
 public class Feed {
-    private String category, location, imageLink, post, profilePicLink, date;
-    int viewsCount;
+    private String category, location, imageLink, post, profilePicLink, date,topic;
+    String viewsCount;
 
     public Feed() {
 
     }
+
     public Feed(String category, String location, String imageLink, String post,
-                String profilePicLink, int viewsCount, String date) {
+                String profilePicLink, String viewsCount, String date ,String topic) {
         this.category = category;
         this.location = location;
         this.imageLink = imageLink;
@@ -16,6 +17,15 @@ public class Feed {
         this.profilePicLink = profilePicLink;
         this.viewsCount = viewsCount;
         this.date = date;
+        this.topic=topic;
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
     }
 
     public String getCategory() {
@@ -59,10 +69,10 @@ public class Feed {
         this.date = date;
     }
 
-    public int getViewsCount(){
+    public String getViewsCount(){
         return viewsCount;
     }
-    public void setViewsCount(int viewsCount) {
+    public void setViewsCount(String viewsCount) {
         this.viewsCount = viewsCount;
     }
 
