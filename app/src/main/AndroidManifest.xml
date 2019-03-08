@@ -9,7 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".Activities.viewpostActivity">
+        <activity android:name=".Activities.RegistrationActivity">
         </activity>
         <activity android:name=".Activities.feedActivity">
             <intent-filter>
@@ -22,7 +22,7 @@
         </activity>
         <activity android:name=".Activities.ChatActivity">
         </activity>
-        <activity android:name=".Activities.ResetPasswordActivity">
+        <activity android:name=".ResetPasswordActivity">
         </activity>
         <activity
                 android:name=".Activities.SignupActivity"

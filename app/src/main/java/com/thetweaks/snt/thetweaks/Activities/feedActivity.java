@@ -81,6 +81,7 @@ public class feedActivity extends AppCompatActivity {
                     feedsList.add(feed);
 
                     Log.e("hey its running", "hey now brown2");
+             recyclerView.setAdapter(mAdapter);
                 }
             }
             @Override
@@ -89,6 +90,9 @@ public class feedActivity extends AppCompatActivity {
             }
         });
 
+ mAdapter.notifyDataSetChanged();
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
 
+        recyclerView.setAdapter(mAdapter);
     }
 }
