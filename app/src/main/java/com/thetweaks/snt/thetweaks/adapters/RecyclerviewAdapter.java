@@ -1,4 +1,4 @@
-package com.thetweaks.snt.thetweaks.explorerData;
+package com.thetweaks.snt.thetweaks.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.thetweaks.snt.thetweaks.R;
+import com.thetweaks.snt.thetweaks.explorerData.User;
 
 import java.util.List;
 

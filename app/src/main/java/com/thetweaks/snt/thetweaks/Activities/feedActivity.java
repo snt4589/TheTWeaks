@@ -1,19 +1,16 @@
 package com.thetweaks.snt.thetweaks.Activities;
 
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import com.google.firebase.database.*;
 import com.thetweaks.snt.thetweaks.R;
 import com.thetweaks.snt.thetweaks.explorerData.Feed;
-import com.thetweaks.snt.thetweaks.explorerData.FeedAdapter;
+import com.thetweaks.snt.thetweaks.adapters.FeedAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -15,7 +15,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.thetweaks.snt.thetweaks.R;
-import com.thetweaks.snt.thetweaks.ResetPasswordActivity;
 
 
 public class LoginActivity extends AppCompatActivity {

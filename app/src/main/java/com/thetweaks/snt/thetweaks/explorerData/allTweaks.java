@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.thetweaks.snt.thetweaks.R;
+import com.thetweaks.snt.thetweaks.adapters.RecyclerviewAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
