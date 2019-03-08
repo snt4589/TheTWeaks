@@ -22,4 +22,10 @@
     <string name="feed_welcome_text">Let your community know the things you care about with a Tweaks of your own
     </string>
     <string name="username_prompt">\@username_tweaks</string>
+    <string name="personalize_description">We\'ll use this to connect you with everyone on TheTweaks according to your
+        category and place you belongs to.
+    </string>
+    <string name="profile_pic_prompt">Person with profile picture show up higer in the network, click above icon to
+        upload (size must be less than 2MB)
+    </string>
 </resources>
