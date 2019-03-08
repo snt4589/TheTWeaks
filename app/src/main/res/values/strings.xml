@@ -21,4 +21,5 @@
     <string name="db_users_json">https://thetweaks-57733.firebaseio.com/users.json</string>
     <string name="feed_welcome_text">Let your community know the things you care about with a Tweaks of your own
     </string>
+    <string name="username_prompt">\@username_tweaks</string>
 </resources>
