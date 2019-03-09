@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         tools:context=".Publish">
     <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/spinner21"
             android:layout_width="297dp"
             android:layout_height="42dp"
             android:background="@android:drawable/btn_dropdown"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:hint="Add Your Location" android:textSize="24sp" android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/spinner2" app:layout_constraintHorizontal_bias="0.556"
+            app:layout_constraintTop_toBottomOf="@+id/spinner21" app:layout_constraintHorizontal_bias="0.556"
             android:id="@+id/textView25" android:layout_marginLeft="24dp" android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp" android:layout_marginRight="24dp"/>
     <Button

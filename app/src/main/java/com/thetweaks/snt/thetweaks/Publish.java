@@ -12,7 +12,7 @@ public class Publish extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_publish);
         //get the spinner from the xml.
-        Spinner dropdown = findViewById(R.id.spinner2);
+        Spinner dropdown = findViewById(R.id.spinner21);
 //create a list of items for the spinner.
         String[] items = new String[]{"Select type of your post", "News", "OriginStory","Idea","Opinion","Experience","Thought","Problem","Others"};
 //create an adapter to describe how the items are displayed, adapters are used in several places in android.
