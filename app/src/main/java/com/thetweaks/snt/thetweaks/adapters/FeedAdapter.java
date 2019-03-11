@@ -13,12 +13,14 @@ import java.util.List;
 
 public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> {
     private List<Feed> feedsList;
+    OnPostListener onPostListener;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView category, location, postContent, profileName, date, tweakViews,topic;
         public ImageView profileImg;
+        OnPostListener onPostListener;
 
-        public MyViewHolder(View view) {
+        public MyViewHolder(View view,OnPostListener onPostListener) {
             super(view);
             category = (TextView) view.findViewById(R.id.category);
             location = (TextView) view.findViewById(R.id.location);
@@ -27,11 +29,20 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> 
             date = (TextView) view.findViewById(R.id.post_date);
             tweakViews = (TextView) view.findViewById(R.id.post_view);
             topic = (TextView) view.findViewById(R.id.feed_topic);
+            this.onPostListener = onPostListener;
+            view.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            onPostListener.onPostClick(getAdapterPosition());
+
         }
     }
 
-    public FeedAdapter(List<Feed> feedsList) {
+    public FeedAdapter(List<Feed> feedsList , OnPostListener onPostListener) {
         this.feedsList = feedsList;
+        this.onPostListener=onPostListener;
     }
 
     @Override
@@ -39,7 +50,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> 
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.feed_item, parent, false);
 
-        return new MyViewHolder(itemView);
+        return new MyViewHolder(itemView,onPostListener);
     }
 
     @Override
@@ -57,5 +68,9 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.MyViewHolder> 
     @Override
     public int getItemCount() {
         return feedsList.size();
+    }
+
+    public interface OnPostListener{
+        void onPostClick(int position);
     }
 }

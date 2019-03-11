@@ -41,6 +41,7 @@
         </activity>
         <activity android:name=".Activities.ProfileActivity">
         </activity>
+        <activity android:name=".Activities.viewpostActivity"></activity>
         <activity
                 android:name=".Activities.explore_Activity"
                 android:label="@string/title_activity_explorer_"
