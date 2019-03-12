@@ -69,7 +69,7 @@ public class feedActivity extends AppCompatActivity implements FeedAdapter.OnPos
                         System.out.println("ERROR" + e.toString());
                     }
 
-                    String imageLink = "code for image";
+                    String imageLink = postMap.get("post_image_url");
                     //TODO:this is for when anynode is added you have to make a snapshot for all existing nodes first
                     // imageLink = postMap.get("");
                     String post = postMap.get("post_content");
@@ -83,8 +83,9 @@ public class feedActivity extends AppCompatActivity implements FeedAdapter.OnPos
                     }
                     String date = postMap.get("post_date");
                     String topic = postMap.get("post_title");
+                    String postId = snap.getKey().toString();
 
-                    Feed feed = new Feed(category, location, imageLink, post, profilePicLink, viewsCount, date, topic);
+                    Feed feed = new Feed(category, location, imageLink, post, profilePicLink, viewsCount, date, topic, postId);
                     feedsList.add(feed);
 
                     Log.e("hey its running", "hey now brown2");
@@ -115,6 +116,7 @@ public class feedActivity extends AppCompatActivity implements FeedAdapter.OnPos
     intent.putExtra("post",model.getPost());
     intent.putExtra("view",model.getViewsCount());
     intent.putExtra("location",model.getLocation());
+    intent.putExtra("postId",model.getPostId());
         startActivity(intent);
     }
 }
