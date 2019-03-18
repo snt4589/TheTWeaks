@@ -18,17 +18,13 @@
         <activity android:name=".Activities.RegistrationActivity">
         </activity>
         <activity android:name=".Activities.feedActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".Activities.ConversationsActivity">
         </activity>
         <activity android:name=".Activities.ChatActivity">
         </activity>
-        <activity android:name=".ResetPasswordActivity">
+        <activity android:name=".Activities.ResetPasswordActivity">
         </activity>
         <activity
                 android:name=".Activities.SignupActivity"
@@ -42,6 +38,11 @@
         <activity android:name=".Activities.editBio">
         </activity>
         <activity android:name=".Activities.ProfileActivity">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
         </activity>
         <activity android:name=".Activities.viewpostActivity"></activity>
         <activity
