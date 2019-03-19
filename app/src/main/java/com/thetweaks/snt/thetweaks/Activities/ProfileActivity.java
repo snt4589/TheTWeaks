@@ -30,6 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+
         messageBtn = (ImageButton) findViewById(R.id.messageBtn);
         userName = (TextView) findViewById(R.id.userName);
 
