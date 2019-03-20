@@ -104,10 +104,10 @@ public class ChatActivity extends AppCompatActivity {
 
         if (type == 1) {
             lp2.gravity = Gravity.LEFT;
-            textView.setBackgroundResource(R.drawable.bubble_in);
+            textView.setBackgroundColor(getResources().getColor(R.color.white));
         } else {
             lp2.gravity = Gravity.RIGHT;
-            textView.setBackgroundResource(R.drawable.bubble_out);
+            textView.setBackgroundColor(getResources().getColor(R.color.pink));
         }
         textView.setLayoutParams(lp2);
         layout.addView(textView);
