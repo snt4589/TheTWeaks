@@ -1,6 +1,8 @@
 package com.thetweaks.snt.thetweaks.Activities;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
@@ -95,6 +97,7 @@ public class ChatActivity extends AppCompatActivity {
         });
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public void addMessageBox(String message, int type) {
         TextView textView = new TextView(ChatActivity.this);
         textView.setText(message);
@@ -105,9 +108,11 @@ public class ChatActivity extends AppCompatActivity {
         if (type == 1) {
             lp2.gravity = Gravity.LEFT;
             textView.setBackgroundColor(getResources().getColor(R.color.white));
+            textView.setBackgroundResource(R.drawable.rounded_corners);
         } else {
             lp2.gravity = Gravity.RIGHT;
             textView.setBackgroundColor(getResources().getColor(R.color.pink));
+            textView.setBackgroundResource(R.drawable.rounded_corners);
         }
         textView.setLayoutParams(lp2);
         layout.addView(textView);
