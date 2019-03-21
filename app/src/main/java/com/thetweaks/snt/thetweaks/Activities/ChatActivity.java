@@ -111,7 +111,7 @@ public class ChatActivity extends AppCompatActivity {
             textView.setBackgroundResource(R.drawable.rounded_corners);
         } else {
             lp2.gravity = Gravity.RIGHT;
-            textView.setBackgroundColor(getResources().getColor(R.color.pink));
+            textView.setBackgroundColor(getResources().getColor(R.color.sent_chat));
             textView.setBackgroundResource(R.drawable.rounded_corners);
         }
         textView.setLayoutParams(lp2);

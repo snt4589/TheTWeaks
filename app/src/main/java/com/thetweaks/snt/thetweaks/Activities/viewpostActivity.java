@@ -55,7 +55,7 @@ public class viewpostActivity extends AppCompatActivity {
         comment_adapter = new comment_adapter(commentData1);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
-        showcomment();
+        //showcomment();
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(comment_adapter);
 
@@ -65,7 +65,7 @@ public class viewpostActivity extends AppCompatActivity {
     }
 
 
-    private void showcomment(){
+    /*private void showcomment(){
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         final DatabaseReference commentsRef = mDatabase.child("comments");
@@ -111,5 +111,5 @@ public class viewpostActivity extends AppCompatActivity {
 //commentData ca = new commentData("draker","12 june","asdasdasd","asdasdasd") ;
 //commentData1.add(ca);
   //      recyclerView.setAdapter(comment_adapter);
-    }
+    }*/
 }
