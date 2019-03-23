@@ -55,7 +55,7 @@ public class viewpostActivity extends AppCompatActivity {
         comment_adapter = new comment_adapter(commentData1);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
-        showcomment();
+        //showcomment();
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(comment_adapter);
 
@@ -65,23 +65,33 @@ public class viewpostActivity extends AppCompatActivity {
     }
 
 
-    private void showcomment(){
+    /*private void showcomment(){
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        DatabaseReference commentsRef = mDatabase.child("comments");
+        final DatabaseReference commentsRef = mDatabase.child("comments");
         Query query = commentsRef.orderByChild("post_id").equalTo(postId);
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot snap : dataSnapshot.getChildren()){
                     Map<String, String> commentMap = (Map<String, String>) snap.getValue();
-                    String name = commentMap.get("user_id");
+                    String userId = commentMap.get("user_id");
                     String date = commentMap.get("comment_date");
                     String comment = commentMap.get("comment");
                     String image = commentMap.get("user_id");
+                    DatabaseReference user = mDatabase.child("users").child(userId);
+                    final String[] name = new String[1];
 
+                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
 
-                    commentData ca = new commentData(name, date, comment, image);
+                    //ref.child('users').orderByChild('name').equalTo('John Doe').on("value", function(snapshot) {
+                      //  console.log(snapshot.val());
+                        //snapshot.forEach(function(data) {
+                          //  console.log(data.key);
+                        //});
+                    //});
+
+                    commentData ca = new commentData(name[0], date, comment, image);
                     commentData1.add(ca);
                     recyclerView.setAdapter(comment_adapter);
                 }
@@ -101,5 +111,5 @@ public class viewpostActivity extends AppCompatActivity {
 //commentData ca = new commentData("draker","12 june","asdasdasd","asdasdasd") ;
 //commentData1.add(ca);
   //      recyclerView.setAdapter(comment_adapter);
-    }
+    }*/
 }
