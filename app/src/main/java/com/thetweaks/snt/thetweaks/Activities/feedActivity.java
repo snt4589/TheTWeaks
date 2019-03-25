@@ -10,7 +10,11 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import com.google.firebase.database.*;
+import com.thetweaks.snt.thetweaks.Publish;
 import com.thetweaks.snt.thetweaks.R;
 import com.thetweaks.snt.thetweaks.explorerData.Feed;
 import com.thetweaks.snt.thetweaks.adapters.FeedAdapter;
@@ -27,6 +31,8 @@ public class feedActivity extends AppCompatActivity implements FeedAdapter.OnPos
     private DatabaseReference mDatabase;
     public List<String> data = new ArrayList<>();
     public int position;
+    private ImageView feed,comm,publish,explore;
+    private Button writeTweaks;
 
 
     @Override
@@ -48,6 +54,8 @@ public class feedActivity extends AppCompatActivity implements FeedAdapter.OnPos
 //        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 
 
+        InitializeUI();
+        clicklistener();
         prepareFeedData();
     }
     //TODO: Still need to customize data to the profile
@@ -118,5 +126,52 @@ public class feedActivity extends AppCompatActivity implements FeedAdapter.OnPos
     intent.putExtra("location",model.getLocation());
     intent.putExtra("postId",model.getPostId());
         startActivity(intent);
+    }
+    private void InitializeUI(){
+
+        //here is the initialization
+
+        feed = (ImageView)findViewById(R.id.feedfee);
+        comm = (ImageView)findViewById(R.id.communityfee);
+        publish = (ImageView)findViewById(R.id.publishfee);
+        explore = (ImageView)findViewById(R.id.explorerfee);
+        writeTweaks=(Button)findViewById(R.id.writeTweaks);
+    }
+
+
+
+    private void  clicklistener(){
+        feed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(feedActivity.this, feedActivity.class);
+                startActivity(intent);
+            }
+        });
+        comm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(feedActivity.this,community.class));
+            }
+        });
+        publish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(feedActivity.this, Publish.class));
+            }
+        });
+        explore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(feedActivity.this, explore_Activity.class));
+            }
+        });
+        writeTweaks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(feedActivity.this,Publish.class));
+            }
+        });
+
     }
 }

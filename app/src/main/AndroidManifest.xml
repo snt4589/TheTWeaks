@@ -40,11 +40,7 @@
         </activity>
         <activity android:name=".Activities.community"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".Activities.categoryActivity"></activity>
         <activity android:name=".Activities.editProfile"
@@ -58,6 +54,13 @@
         </activity>
         <activity android:name=".Activities.viewpostActivity"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".Publish"><intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter></activity>
+        <activity android:name=".pubilsh_component"></activity>
+
         <activity
                 android:name=".Activities.explore_Activity"
                 android:label="@string/title_activity_explorer_"

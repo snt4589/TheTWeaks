@@ -67,38 +67,12 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = inputEmail.getText().toString().trim();
-                final String password = inputPassword.getText().toString();
-
-                if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(getApplicationContext(), "Enter Password!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                auth.signInWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-
-                                if (!task.isSuccessful()) {
-                                    if (password.length() < 6) {
-                                        inputPassword.setError("Password should of minimum 6 characters");
-                                    } else {
-                                        Toast.makeText(LoginActivity.this, "Sign in failed", Toast.LENGTH_SHORT).show();
-                                    }
-                                } else {
-                                    Intent intent = new Intent(LoginActivity.this, community.class);
-                                    startActivity(intent);
-                                    finish();
-                                }
-                            }
-                        });
+                //TODO: have to ADD authentication here
+                startActivity(new Intent(LoginActivity.this, community.class));
             }
-        });
+
+                        });
+
 
 
         animatorSet = new AnimatorSet();

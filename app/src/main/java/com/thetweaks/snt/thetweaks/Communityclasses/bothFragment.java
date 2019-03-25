@@ -37,4 +37,5 @@ public class bothFragment extends Fragment {
     lstmembers = new ArrayList<>();
         lstmembers.add( new members("Name","location","designation",R.drawable.community,"Name2","location2","designation",R.drawable.community));
     }
+
 }

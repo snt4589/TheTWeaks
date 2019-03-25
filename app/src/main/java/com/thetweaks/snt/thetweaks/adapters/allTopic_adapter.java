@@ -51,5 +51,6 @@ public allTopic_adapter(List<topTopic> allTopicList){this.allTopicList = allTopi
             allCategory=(TextView)view.findViewById(R.id.alltopicCategory);
         }
 
+
     }
 }

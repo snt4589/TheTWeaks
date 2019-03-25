@@ -19,6 +19,8 @@ public class topTweaks extends Fragment {
     private RecyclerView recyclerView;
     private List<User> mUser;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

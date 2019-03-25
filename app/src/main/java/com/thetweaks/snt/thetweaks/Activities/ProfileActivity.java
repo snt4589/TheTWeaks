@@ -36,18 +36,18 @@ public class ProfileActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
-
-        if (mUser == null) {
-            // Not signed in
-            startActivity(new Intent(this, LoginActivity.class));
-            finish();
-            return;
-        } else {
-            //mUsername = mUser.getDisplayName();
-            //if (mUser.getPhotoUrl() != null) {
-            //mPhotoUrl = mUser.getPhotoUrl().toString();
-            //}
-        }
+//
+//        if (mUser == null) {
+//            // Not signed in
+//            startActivity(new Intent(this, LoginActivity.class));
+//            finish();
+//            return;
+//        } else {
+//            //mUsername = mUser.getDisplayName();
+//            //if (mUser.getPhotoUrl() != null) {
+//            //mPhotoUrl = mUser.getPhotoUrl().toString();
+//            //}
+//        }
 
         tabLayout = (TabLayout) findViewById(R.id.tablayout_id);
         viewPager = (ViewPager) findViewById(R.id.viewer_id);
@@ -62,18 +62,18 @@ public class ProfileActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
-        messageBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mUser.toString() != userName.getText().toString()) {
-                    UserDetails.chatWith = userName.getText().toString();
-                    startActivity(new Intent(ProfileActivity.this, ChatActivity.class));
-                    finish();
-                } else {
-                    startActivity(new Intent(ProfileActivity.this, ConversationsActivity.class));
-                }
-            }
-        });
+//        messageBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (mUser.toString() != userName.getText().toString()) {
+//                    UserDetails.chatWith = userName.getText().toString();
+//                    startActivity(new Intent(ProfileActivity.this, ChatActivity.class));
+//                    finish();
+//                } else {
+//                    startActivity(new Intent(ProfileActivity.this, ConversationsActivity.class));
+//                }
+//            }
+//        });
 
     }
 
