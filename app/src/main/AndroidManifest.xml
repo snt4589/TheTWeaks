@@ -42,14 +42,16 @@
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>
-        <activity android:name=".Activities.categoryActivity"></activity>
+        <activity android:name=".Activities.categoryActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".Activities.editProfile"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
         <activity android:name=".Activities.editBio"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activities.ProfileActivity">
+        <activity android:name=".Activities.ProfileActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>
         <activity android:name=".Activities.viewpostActivity"
@@ -59,7 +61,8 @@
 
             <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter></activity>
-        <activity android:name=".pubilsh_component"></activity>
+        <activity android:name=".pubilsh_component"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
         <activity
                 android:name=".Activities.explore_Activity"
