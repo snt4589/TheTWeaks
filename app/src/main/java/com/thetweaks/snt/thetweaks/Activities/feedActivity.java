@@ -11,9 +11,16 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import com.google.firebase.database.*;
+import com.thetweaks.snt.thetweaks.FeedInterfaceApi;
 import com.thetweaks.snt.thetweaks.R;
+import com.thetweaks.snt.thetweaks.explorerData.DummyFeed;
 import com.thetweaks.snt.thetweaks.explorerData.Feed;
 import com.thetweaks.snt.thetweaks.adapters.FeedAdapter;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +57,67 @@ public class feedActivity extends AppCompatActivity implements FeedAdapter.OnPos
 
         prepareFeedData();
     }
-    //TODO: Still need to customize data to the profile
+
+    private void prepareFeedData() {
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://jsonplaceholder.typicode.com/")
+                .addConverterFactory(GsonConverterFactory.create()).build();
+
+        FeedInterfaceApi feedInterfaceApi = retrofit.create(FeedInterfaceApi.class);
+
+        Call<List<DummyFeed>> call = feedInterfaceApi.getPosts();
+
+        call.enqueue(new Callback<List<DummyFeed>>() {
+            @Override
+            public void onResponse(Call<List<DummyFeed>> call, Response<List<DummyFeed>> response) {
+
+                if (!response.isSuccessful()) {
+                    Log.e("REsponse error", "Invalid response code");
+                    return;
+                }
+
+                List<DummyFeed> feeds = response.body();
+
+                for (DummyFeed feed: feeds) {
+
+                    String category = "category";
+                    String location = "None";
+                    String imageLink = "None";
+                    String postContent = feed.getBody();
+                    String profilePicLink = feed.getUserID();
+                    String viewsCount = "151";
+                    String date = "yesterday";
+                    String topic= feed.getBody();
+                    String postId = feed.getId();
+
+                    Feed postPiece = new Feed(category,location,imageLink,postContent, profilePicLink,viewsCount, date, topic, postId);
+
+                    feedsList.add(postPiece);
+                    recyclerView.setAdapter(mAdapter);
+
+
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<List<DummyFeed>> call, Throwable t) {
+
+                Log.e("Error on request", "Requesterro");
+
+            }
+
+
+        });
+
+    mAdapter.notifyDataSetChanged();
+    recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+    recyclerView.setAdapter(mAdapter);
+
+    }
+
+   /* //TODO: Still need to customize data to the profile
     private void prepareFeedData() {
 
         DatabaseReference postsRef = mDatabase.child("posts");
@@ -100,9 +167,8 @@ public class feedActivity extends AppCompatActivity implements FeedAdapter.OnPos
 
  mAdapter.notifyDataSetChanged();
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-
         recyclerView.setAdapter(mAdapter);
-    }
+    }*/
 
     @Override
     public void onPostClick(int position) {
