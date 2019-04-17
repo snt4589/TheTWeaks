@@ -1,7 +1,22 @@
 package com.thetweaks.snt.thetweaks.explorerData;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Feed {
-    private String category, location, imageLink, post, profilePicLink, date,topic, postId;
+    private String category, location, imageLink, date;
+
+    @SerializedName("userId")
+    private String profilePicLink;
+
+    @SerializedName("id")
+    private String postId;
+
+    @SerializedName("title")
+    private String topic;
+
+    @SerializedName("body")
+    private String post;
+
     String viewsCount;
 
     public Feed() {
