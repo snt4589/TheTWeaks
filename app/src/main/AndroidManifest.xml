@@ -11,43 +11,63 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".Activities.createTopicActivity">
+        <activity android:name=".Activities.createTopicActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".allTopics">
+        <activity android:name=".allTopics"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activities.RegistrationActivity">
+        <activity android:name=".Activities.RegistrationActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activities.feedActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+        <activity android:name=".Activities.feedActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
-        <activity android:name=".Activities.ConversationsActivity">
+        <activity android:name=".Activities.ConversationsActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activities.ChatActivity">
+        <activity android:name=".Activities.ChatActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".ResetPasswordActivity">
+        <activity android:name=".Activities.ResetPasswordActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
         <activity
                 android:name=".Activities.SignupActivity"
                 android:label="@string/title_activity_signup"
-                android:theme="@style/AppTheme.NoActionBar">
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activities.community">
+        <activity android:name=".Activities.community"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
         </activity>
-        <activity android:name=".Activities.editProfile">
+        <activity android:name=".Activities.categoryActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".Activities.editProfile"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activities.editBio">
+        <activity android:name=".Activities.editBio"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".Activities.ProfileActivity">
+        <activity android:name=".Activities.ProfileActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
         </activity>
-        <activity android:name=".Activities.viewpostActivity"></activity>
+        <activity android:name=".Activities.viewpostActivity"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".Publish"><intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter></activity>
+        <activity android:name=".pubilsh_component"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+
         <activity
                 android:name=".Activities.explore_Activity"
                 android:label="@string/title_activity_explorer_"
-                android:theme="@style/AppTheme.NoActionBar">
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
         <activity
                 android:name=".Activities.LoginActivity"

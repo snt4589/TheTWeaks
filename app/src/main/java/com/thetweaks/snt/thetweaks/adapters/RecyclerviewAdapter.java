@@ -37,7 +37,7 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
-        myViewHolder.downvote.setText(mUser.get(i).getDownvote());
+
         myViewHolder.upvote.setText(mUser.get(i).getUpvote());
         myViewHolder.views.setText(mUser.get(i).getViews());
         myViewHolder.post.setText(mUser.get(i).getPostDetails());
@@ -74,7 +74,7 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
             post = (TextView) itemView.findViewById(R.id.post_detail);
             topic = (TextView) itemView.findViewById(R.id.Topic);
             upvote = (TextView) itemView.findViewById(R.id.upvote);
-            downvote = (TextView) itemView.findViewById(R.id.downvote);
+
             studentinfo = (TextView) itemView.findViewById(R.id.student_info);
             userdetail = (TextView) itemView.findViewById(R.id.Profile_name);
             postPic= (ImageView) itemView.findViewById(R.id.post_img);

@@ -6,6 +6,49 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Publish">
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar3"
+            app:title="@string/thetweaks"
+            app:titleTextColor="#0B570E"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="1"
+            android:background="#ffff"
+            android:textAlignment="center"
+
+
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:layout_scrollFlags="scroll|enterAlways" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffff"
+            android:paddingTop="2dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/linearLayout2"
+            app:layout_anchorGravity="right|center" app:layout_anchor="@+id/container"
+    >
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="30dp" app:srcCompat="@drawable/newsfeed"
+                android:layout_weight="1" android:id="@+id/feedpub"/>
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="30dp" app:srcCompat="@drawable/community"
+                android:layout_weight="1" android:id="@+id/communitypub"/>
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="30dp" app:srcCompat="@drawable/publish"
+                android:layout_weight="1" android:id="@+id/publishpub"/>
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="30dp" app:srcCompat="@drawable/explore"
+                android:layout_weight="1" android:id="@+id/explorepub"/>
+    </LinearLayout>
     <Spinner
             android:id="@+id/spinner21"
             android:layout_width="297dp"
@@ -20,9 +63,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="48dp" android:textSize="30sp"
+            android:textSize="30sp"
             app:layout_constraintHorizontal_bias="0.568" android:id="@+id/textView2" android:layout_marginLeft="24dp"
-            android:layout_marginStart="24dp" android:layout_marginEnd="24dp" android:layout_marginRight="24dp"/>
+            android:layout_marginStart="24dp" android:layout_marginEnd="24dp" android:layout_marginRight="24dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/toolbar3"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +81,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_edit"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/button4" android:layout_marginTop="24dp"
+            android:id="@+id/publishbtn" android:layout_marginTop="24dp"
             app:layout_constraintTop_toBottomOf="@+id/textView25" android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
             app:layout_constraintHorizontal_bias="1.0"/>

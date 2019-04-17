@@ -7,16 +7,34 @@
         android:layout_height="match_parent"
         tools:context=".Activities.ProfileActivity">
 
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar5"
+            app:title="@string/thetweaks"
+            app:titleTextColor="#0B570E"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="1"
+            android:background="#ffff"
+            android:textAlignment="center"
+
+
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:layout_scrollFlags="scroll|enterAlways" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+
+    </android.support.v7.widget.Toolbar>
     <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:fillViewport="true">
+            android:layout_height="wrap_content" android:fillViewport="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar5" app:layout_constraintEnd_toEndOf="parent">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:orientation="vertical">
             <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:background="#38AE53" app:layout_constraintEnd_toEndOf="parent"
+                    android:background="#FFFFFF" app:layout_constraintEnd_toEndOf="parent"
                     android:id="@+id/constraintLayout2">
 
                 <TextView
@@ -40,11 +58,11 @@
                         android:id="@+id/messageBtn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:layout_constraintStart_toEndOf="@id/Bio"
-                        app:layout_constraintTop_toBottomOf="@id/userName"
-                        android:layout_marginLeft="50dp"
                         android:src="@android:drawable/ic_menu_send"
-                        android:background="@color/colorAccent"/>
+                        android:background="@color/colorAccent"
+                        app:layout_constraintStart_toEndOf="@+id/Location" android:layout_marginStart="36dp"
+                        android:layout_marginLeft="36dp" android:layout_marginTop="12dp"
+                        app:layout_constraintTop_toBottomOf="@+id/Bio"/>
                 <TextView
                         android:text="TextView"
                         android:layout_width="wrap_content"
@@ -62,32 +80,15 @@
                         app:layout_constraintStart_toEndOf="@+id/imageView" android:layout_marginLeft="8dp"
                         android:layout_marginStart="8dp" android:textColor="#000000"/>
                 <TextView
-                        android:text="0 tweak Views"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tweakViews" android:layout_marginTop="12dp"
-                        app:layout_constraintTop_toBottomOf="@+id/Location"
-                        app:layout_constraintStart_toEndOf="@+id/imageView" android:layout_marginLeft="8dp"
-                        android:layout_marginStart="8dp" android:textColor="#000000"/>
-                <View
-                        android:layout_width="0dp"
-                        android:layout_height="2dp"
-                        android:background="#c0c0c0" app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintHorizontal_bias="0.98"
-                        app:layout_constraintTop_toBottomOf="@+id/tweakViews"
-                        android:layout_marginTop="16dp"
-                        android:id="@+id/view" android:layout_marginLeft="150dp" android:layout_marginStart="150dp"/>
-                <TextView
                         android:text="FOLLOWERS"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView13"
-                        app:layout_constraintTop_toBottomOf="@+id/view"
-                        app:layout_constraintStart_toEndOf="@+id/imageView" android:layout_marginLeft="8dp"
-                        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        app:layout_constraintBottom_toBottomOf="parent" android:textColor="#000000"/>
+                        app:layout_constraintBottom_toBottomOf="parent" android:textColor="#000000"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView"
+                        android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginLeft="32dp" android:layout_marginStart="32dp"
+                        app:layout_constraintVertical_bias="1.0"/>
                 <TextView
                         android:text="0"
                         android:layout_width="19dp"
@@ -102,8 +103,8 @@
                         android:layout_height="139dp" app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         android:id="@+id/imageView" app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
-                        app:layout_constraintVertical_bias="0.075" android:layout_marginTop="35dp"
+                        android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                        app:layout_constraintVertical_bias="1.0" android:layout_marginTop="35dp"
                         app:srcCompat="@drawable/bussiness" android:visibility="visible"/>
             </android.support.constraint.ConstraintLayout>
             <android.support.design.widget.TabLayout
@@ -130,7 +131,7 @@
             </android.support.design.widget.TabLayout>
             <android.support.v4.view.ViewPager
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tablayout_id" android:id="@+id/viewer_id"/>
         </LinearLayout>

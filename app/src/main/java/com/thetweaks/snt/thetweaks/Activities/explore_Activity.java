@@ -1,5 +1,6 @@
 package com.thetweaks.snt.thetweaks.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import com.thetweaks.snt.thetweaks.Publish;
 import com.thetweaks.snt.thetweaks.R;
 import com.thetweaks.snt.thetweaks.explorerData.allTweaks;
 import com.thetweaks.snt.thetweaks.explorerData.topTweaks;
@@ -23,7 +27,7 @@ public class explore_Activity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
 
-
+    private ImageView feed,comm,publish,explore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +37,8 @@ public class explore_Activity extends AppCompatActivity {
 //        newsview.setLayoutManager(new LinearLayoutManager(this));
 //        newsview.setAdapter();
 
+        InitializeUI();
+        clicklistener();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -108,72 +114,45 @@ public class explore_Activity extends AppCompatActivity {
             return 2;
         }
     }
+    private void InitializeUI(){
+
+        //here is the initialization
+
+        feed = (ImageView)findViewById(R.id.feedexp);
+        comm = (ImageView)findViewById(R.id.communityexp);
+        publish = (ImageView)findViewById(R.id.publishexp);
+        explore = (ImageView)findViewById(R.id.explorerexp);
+    }
+
+
+
+    private void  clicklistener(){
+        feed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(explore_Activity.this, feedActivity.class);
+                startActivity(intent);
+            }
+        });
+        comm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(explore_Activity.this,community.class));
+            }
+        });
+        publish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(explore_Activity.this, Publish.class));
+            }
+        });
+        explore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(explore_Activity .this, explore_Activity.class));
+            }
+        });
+
+    }
 }
 
-
-//}
-//class User{
-//    private String userName;
-//    private String postDetails;
-//    private Integer upvote;
-//    private Integer downvote;
-//    private String date;
-//    private String studentDetail;
-//    private Integer views;
-//
-//    public String getUserName() {
-//        return userName;
-//    }
-//
-//    public void setUserName(String userName) {
-//        this.userName = userName;
-//    }
-//
-//    public String getPostDetails() {
-//        return postDetails;
-//    }
-//
-//    public void setPostDetails(String postDetails) {
-//        this.postDetails = postDetails;
-//    }
-//
-//    public Integer getUpvote() {
-//        return upvote;
-//    }
-//
-//    public void setUpvote(Integer upvote) {
-//        this.upvote = upvote;
-//    }
-//
-//    public Integer getDownvote() {
-//        return downvote;
-//    }
-//
-//    public void setDownvote(Integer downvote) {
-//        this.downvote = downvote;
-//    }
-//
-//    public String getDate() {
-//        return date;
-//    }
-//
-//    public void setDate(String date) {
-//        this.date = date;
-//    }
-//
-//    public String getStudentDetail() {
-//        return studentDetail;
-//    }
-//
-//    public void setStudentDetail(String studentDetail) {
-//        this.studentDetail = studentDetail;
-//    }
-//
-//    public String getViews() {
-//        return views;
-//    }
-//
-//    public void setViews(Integer views) {
-//        this.views = views;
-//    }
-//}

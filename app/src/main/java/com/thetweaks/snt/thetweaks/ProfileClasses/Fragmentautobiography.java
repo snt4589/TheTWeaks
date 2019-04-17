@@ -17,7 +17,7 @@ public class Fragmentautobiography extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        v = inflater.inflate(R.layout.autobiography_fragment,container,false);
+        v = inflater.inflate(R.layout.story_profile,container,false);
         return v;
     }
 }

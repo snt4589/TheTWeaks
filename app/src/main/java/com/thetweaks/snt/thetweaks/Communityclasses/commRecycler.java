@@ -1,13 +1,16 @@
 package com.thetweaks.snt.thetweaks.Communityclasses;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.thetweaks.snt.thetweaks.Activities.ProfileActivity;
 import com.thetweaks.snt.thetweaks.R;
 
 import java.util.List;
@@ -40,6 +43,23 @@ communityAdapter.name1.setText(mData.get(i).getName());
     communityAdapter.des2.setText(mData.get(i).getDesignation1());
     communityAdapter.profile1.setImageResource(mData.get(i).getPhoto());
     communityAdapter.profile2.setImageResource(mData.get(i).getPhoto1());
+    communityAdapter.layout2.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(mContext,ProfileActivity.class);
+            mContext.startActivity(intent);
+        }
+    });
+    communityAdapter.layout1.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(mContext, ProfileActivity.class);
+            mContext.startActivity(intent);
+
+        }
+    });
+
+
     }
 
 
@@ -58,6 +78,7 @@ communityAdapter.name1.setText(mData.get(i).getName());
         private TextView loc2;
         private TextView des2;
         private ImageView profile2;
+        private ConstraintLayout layout1 ,layout2;
         public communityAdapter(@NonNull View itemView) {
             super(itemView);
 
@@ -69,6 +90,8 @@ communityAdapter.name1.setText(mData.get(i).getName());
             des2 = (TextView)itemView.findViewById(R.id.desg2);
             profile1 = (ImageView)itemView.findViewById(R.id.pro1);
             profile2 = (ImageView)itemView.findViewById(R.id.pro2);
+            layout1=(ConstraintLayout)itemView.findViewById(R.id.layout1);
+            layout2=(ConstraintLayout)itemView.findViewById(R.id.layout2);
 
         }
     }
